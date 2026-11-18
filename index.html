@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Víctor Corchado Guirao, CV</title>
+<meta name="description" content="Delivery Consultant en Deloitte especializado en process mining con Celonis. Desarrollador de aplicaciones multiplataforma. CV en español e inglés.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Víctor Corchado Guirao, CV">
+<meta property="og:description" content="Delivery Consultant en Deloitte especializado en process mining con Celonis. CV en español e inglés.">
+<meta property="og:url" content="https://vctr1313.github.io/">
+<meta property="og:image" content="https://vctr1313.github.io/photo.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0A2A30">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A2A30'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='27' fill='%234FD1C5'%3EVC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Deep teal canvas like a process explorer: teal marks cases that flow, amber marks bottlenecks. */
+  --deep: #0A2A30;
+  --deep-2: #0E343B;
+  --deep-3: #12404A;
+  --deep-line: rgba(160, 222, 222, 0.16);
+  --on-deep: #EAF4F4;
+  --on-deep-soft: #C3D8D9;
+  --on-deep-muted: #8FB0B3;
+  --flow: #4FD1C5;
+  --flow-ink: #052A2E;
+  --heat: #F5A524;
+  --heat-soft: #F8C66E;
+  --paper: #F2F6F6;
+  --surface: #FFFFFF;
+  --ink: #0E2329;
+  --muted: #56696F;
+  --line: #D5E0E2;
+  --accent: #0B6E77;
+  --accent-soft: #E1F0F0;
+  --focus: var(--accent);
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0B1C20;
+    --surface: #0F262B;
+    --ink: #E3EDEE;
+    --muted: #97ADB1;
+    --line: #21393F;
+    --accent: #5BD3C7;
+    --accent-soft: #12363C;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
+.ic { width: 18px; height: 18px; flex: none; display: block; }
+.dark { --focus: var(--flow); }
+
+/* ---------- Top bar ---------- */
+.bar {
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(10, 42, 48, 0.88);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--deep-line);
+  color: var(--on-deep);
+}
+.bar-in { max-width: 1140px; margin: 0 auto; padding: 9px 28px; min-height: 62px; display: flex; align-items: center; gap: 18px; }
+.bar-name {
+  background: none; border: 0; padding: 6px 0; cursor: pointer;
+  font-weight: 720; font-size: 15px; font-stretch: 118%; letter-spacing: -0.005em; white-space: nowrap;
+  opacity: 0; transform: translateY(6px); pointer-events: none;
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
+}
+.bar.scrolled .bar-name { opacity: 1; transform: none; pointer-events: auto; }
+.bar-nav { position: relative; display: flex; gap: 2px; margin-left: auto; }
+.bar-nav button {
+  background: none; border: 0; cursor: pointer; border-radius: 8px;
+  padding: 10px 12px; font-size: 14px; font-weight: 520; color: var(--on-deep-muted);
+  transition: color .2s;
+}
+.bar-nav button:hover, .bar-nav button[aria-current="true"] { color: var(--on-deep); }
+.nav-ind {
+  position: absolute; left: 0; bottom: 3px; height: 2px; width: 0; border-radius: 2px;
+  background: var(--flow); opacity: 0;
+  transition: transform .4s var(--ease), width .4s var(--ease), opacity .3s;
+}
+.bar-actions { display: flex; align-items: center; gap: 10px; }
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); border: 1px solid var(--deep-line); }
+.lang button {
+  border: 0; background: transparent; cursor: pointer; border-radius: 999px;
+  padding: 8px 11px; font-size: 13px; font-weight: 650; letter-spacing: 0.02em; color: var(--on-deep-muted);
+  transition: background .25s, color .25s;
+}
+.lang button[aria-pressed="true"] { background: var(--on-deep); color: var(--deep); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  border-radius: 999px; border: 1px solid transparent; cursor: pointer; text-decoration: none;
+  padding: 13px 20px; font-size: 15px; font-weight: 650; line-height: 1; white-space: nowrap;
+  transition: box-shadow .25s, border-color .25s, background .25s, transform .15s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--flow); color: var(--flow-ink); }
+.btn-primary:hover { box-shadow: 0 0 0 5px rgba(79, 209, 197, 0.22); }
+.btn-ghost { background: transparent; color: var(--on-deep); border-color: rgba(234, 244, 244, 0.3); }
+.btn-ghost:hover { border-color: var(--on-deep); }
+.btn-bar { padding: 10px 15px; font-size: 14px; }
+.btn .short { display: none; }
+.btn[aria-busy="true"] { cursor: progress; opacity: .85; }
+.motion .btn[aria-busy="true"] .ic { animation: bob .9s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(3px); } }
+.no-dl [data-pdf] { display: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background-color: var(--deep);
+  background-image: radial-gradient(rgba(160, 222, 222, 0.11) 1px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: var(--on-deep);
+}
+.hero-grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 60px; align-items: start;
+  padding-top: 64px; padding-bottom: 84px;
+}
+.photo {
+  width: 100px; height: 100px; border-radius: 50%; object-fit: cover; display: block;
+  box-shadow: 0 0 0 3px var(--deep), 0 0 0 5px var(--flow);
+}
+.name {
+  margin: 30px 0 0;
+  font-size: clamp(2.05rem, 5.3vw, 3.85rem); font-weight: 780; font-stretch: 125%;
+  line-height: 0.98; letter-spacing: -0.02em; text-wrap: balance;
+}
+.role { margin: 16px 0 0; font-size: 1.14rem; font-weight: 620; color: var(--flow); max-width: 40ch; line-height: 1.4; }
+.summary { margin: 16px 0 0; color: var(--on-deep-soft); max-width: 58ch; font-size: 1.02rem; }
+.contact-list { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 26px; font-size: 0.95rem; }
+.contact-list li { display: flex; align-items: center; gap: 9px; min-width: 0; }
+.contact-list .ic { color: var(--flow); width: 17px; height: 17px; }
+.contact-list a { color: var(--on-deep); text-decoration: none; border-bottom: 1px solid rgba(234, 244, 244, 0.25); overflow-wrap: anywhere; }
+.contact-list a:hover { border-bottom-color: var(--flow); }
+.copy {
+  display: inline-grid; place-items: center; width: 30px; height: 30px; padding: 0; cursor: pointer;
+  border-radius: 8px; border: 1px solid var(--deep-line); background: transparent; color: var(--on-deep-muted);
+  transition: color .2s, border-color .2s;
+}
+.copy .ic { width: 15px; height: 15px; color: inherit; }
+.copy:hover { color: var(--on-deep); border-color: rgba(234, 244, 244, 0.45); }
+.copy.done { color: var(--flow); border-color: var(--flow); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+/* ---------- Live process simulation ---------- */
+.sim {
+  margin: 0; position: relative;
+  background: var(--deep-2); border: 1px solid var(--deep-line); border-radius: 20px;
+  padding: 20px 20px 18px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28);
+}
+.sim-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; }
+.sim-title { margin: 0; font-size: 1rem; font-weight: 720; font-stretch: 110%; line-height: 1.3; }
+.live { display: inline-flex; align-items: center; gap: 7px; font-size: 0.8rem; font-weight: 600; color: var(--flow); white-space: nowrap; margin-top: 2px; }
+.live i { width: 8px; height: 8px; border-radius: 50%; background: var(--flow); position: relative; }
+.motion .live i::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--flow); animation: ring 1.8s ease-out infinite; }
+.paused .live i::after { animation: none; opacity: 0; }
+@keyframes ring { from { transform: scale(.5); opacity: .9; } to { transform: scale(1.6); opacity: 0; } }
+.sim-sub { margin: 6px 0 0; font-size: 0.86rem; color: var(--on-deep-muted); line-height: 1.45; }
+.sim-stage { position: relative; margin-top: 10px; }
+#sim-svg { display: block; width: 100%; height: auto; overflow: visible; }
+#sim-svg .edge { fill: none; stroke: rgba(143, 176, 179, 0.6); stroke-linecap: round; stroke-width: 2; transition: stroke-width .5s var(--ease); }
+#sim-svg .edge.rw { stroke: rgba(245, 165, 36, 0.62); }
+#sim-svg .ar { fill: rgba(143, 176, 179, 0.85); }
+#sim-svg .ar-rw { fill: rgba(245, 165, 36, 0.85); }
+#sim-svg .node rect { fill: #0A2D33; stroke: rgba(79, 209, 197, 0.5); stroke-width: 1.2; }
+#sim-svg .node.rw rect { stroke: rgba(245, 165, 36, 0.7); }
+#sim-svg .node text { fill: var(--on-deep); font-family: var(--font); font-size: 13.5px; font-weight: 620; text-anchor: middle; dominant-baseline: central; }
+#sim-svg .node.rw text { fill: var(--heat-soft); }
+#sim-svg .count { fill: var(--on-deep-muted); font-family: var(--font); font-size: 11.5px; font-weight: 560; font-variant-numeric: tabular-nums; }
+#sim-svg .count.rw { fill: rgba(248, 198, 110, 0.85); }
+#sim-svg .term { fill: var(--on-deep-muted); }
+#sim-svg .tok { fill: var(--flow); }
+#sim-svg .tok.flag { fill: var(--heat); }
+#sim-svg #toks { transition: opacity .6s; }
+#sim-svg .badge { opacity: 0; transition: opacity .3s; }
+#sim-svg .badge.on { opacity: 1; }
+#sim-svg .badge rect { fill: var(--heat); }
+#sim-svg .badge text { fill: #2B1A00; font-family: var(--font); font-size: 11px; font-weight: 760; text-anchor: middle; dominant-baseline: central; font-variant-numeric: tabular-nums; }
+#sim-svg .ping { fill: none; stroke: var(--flow); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
+#sim-svg .ping.go { animation: ping .9s ease-out; }
+@keyframes ping { from { opacity: .9; transform: scale(.7); } to { opacity: 0; transform: scale(1.7); } }
+.motion #sim-svg .edge { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.1s .55s var(--ease) forwards; }
+.motion #sim-svg .node, .motion #sim-svg .count { animation: fade .6s .45s both; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+
+.sim-toast {
+  position: absolute; left: 50%; bottom: 6px; max-width: calc(100% - 16px);
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 13px; border-radius: 12px; font-size: 0.8rem; line-height: 1.3;
+  background: #F4FBFA; color: #0B2A2E; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0; transform: translate(-50%, 10px); pointer-events: none;
+  transition: opacity .3s, transform .35s var(--ease);
+}
+.sim-toast .ic { width: 16px; height: 16px; color: var(--accent); }
+.sim-toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+.kpi { border: 1px solid var(--deep-line); background: rgba(255, 255, 255, 0.035); border-radius: 12px; padding: 10px 12px 11px; min-width: 0; }
+.kpi-l { display: block; font-size: 0.74rem; line-height: 1.25; color: var(--on-deep-muted); }
+.kpi-v { display: block; margin-top: 5px; font-size: 1.45rem; font-weight: 720; font-stretch: 112%; line-height: 1.05; font-variant-numeric: tabular-nums; transition: color .5s; white-space: nowrap; }
+.kpi-v small { font-size: 0.72rem; font-weight: 560; font-stretch: 100%; color: var(--on-deep-muted); margin-left: 3px; }
+.kpi.good .kpi-v { color: var(--flow); }
+.kpi.bad .kpi-v { color: var(--heat); }
+
+.sim-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap; margin-top: 14px; }
+.switch { display: flex; align-items: center; gap: 12px; cursor: pointer; user-select: none; -webkit-user-select: none; }
+.switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.track { position: relative; flex: none; width: 46px; height: 26px; border-radius: 999px; background: rgba(255, 255, 255, 0.16); transition: background .25s; }
+.thumb { position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--on-deep); transition: transform .3s var(--ease), background .25s; }
+.switch input:checked + .track { background: var(--flow); }
+.switch input:checked + .track .thumb { transform: translateX(20px); background: var(--flow-ink); }
+.switch input:focus-visible + .track { outline: 2px solid var(--flow); outline-offset: 3px; }
+.motion .switch.hint .track { animation: hint 1.8s ease-out 2s 4; }
+@keyframes hint { 0% { box-shadow: 0 0 0 0 rgba(79, 209, 197, .55); } 100% { box-shadow: 0 0 0 12px rgba(79, 209, 197, 0); } }
+.switch-text b { display: block; font-size: 0.92rem; font-weight: 680; }
+.switch-text small { display: block; font-size: 0.78rem; color: var(--on-deep-muted); line-height: 1.3; }
+.pql-btn {
+  background: none; cursor: pointer; border-radius: 999px; border: 1px solid var(--deep-line);
+  padding: 8px 13px; font-size: 0.8rem; font-weight: 600; color: var(--flow);
+}
+.pql-btn:hover { border-color: var(--flow); }
+.pql { margin-top: 12px; }
+.pql p { margin: 0 0 7px; font-size: 0.78rem; color: var(--on-deep-muted); }
+.pql pre {
+  margin: 0; padding: 12px 14px; border-radius: 12px; background: #062329; border: 1px solid var(--deep-line);
+  font-family: var(--mono); font-size: 12.5px; line-height: 1.6; color: #CFE7E6;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.pql .fn { color: var(--flow); }
+.pql .kw { color: #A9C7FF; }
+.pql .str { color: var(--heat-soft); }
+
+/* ---------- Sections ---------- */
+main { display: block; }
+.sec { padding-top: 92px; scroll-margin-top: 70px; }
+.sec-head { margin-bottom: 30px; }
+.sec h2, .contact-band h2 {
+  margin: 0; font-size: clamp(1.75rem, 3.6vw, 2.45rem); font-weight: 760; font-stretch: 118%;
+  letter-spacing: -0.015em; line-height: 1.05;
+}
+.lead { margin: 10px 0 0; color: var(--muted); max-width: 62ch; font-size: 1.02rem; }
+
+/* Experience timeline */
+.timeline { position: relative; padding-left: 46px; max-width: 880px; }
+.rail { position: absolute; left: 13px; top: 14px; bottom: 14px; width: 2px; border-radius: 2px; background: var(--line); overflow: hidden; }
+.rail-fill { position: absolute; inset: 0; background: var(--accent); transform-origin: top; transform: scaleY(0); }
+.jobs { display: grid; gap: 22px; }
+.job { position: relative; }
+.rail-dot {
+  position: absolute; left: -40px; top: 28px; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--paper); border: 2px solid var(--line); transition: border-color .35s, background .35s, box-shadow .35s;
+}
+.job.lit .rail-dot { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 5px var(--accent-soft); }
+.job-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 24px 26px; }
+.job.current .job-card { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.job-top { display: flex; justify-content: space-between; align-items: center; gap: 8px 14px; flex-wrap: wrap; }
+.job h3 { margin: 0; font-size: 1.24rem; font-weight: 740; font-stretch: 110%; line-height: 1.25; }
+.job h3 .team { font-weight: 480; font-stretch: 100%; color: var(--muted); }
+.now { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 650; color: var(--accent); background: var(--accent-soft); padding: 5px 11px 5px 9px; border-radius: 999px; }
+.now i { position: relative; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.motion .now i::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--accent); animation: ring 1.8s ease-out infinite; }
+.place { margin: 2px 0 0; color: var(--muted); font-size: 0.92rem; }
+.roles { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 3px; }
+.roles li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 16px; }
+.roles .title { font-weight: 640; }
+.when { margin-left: auto; color: var(--muted); font-size: 0.9rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.points { margin: 14px 0 0; padding-left: 20px; }
+.points li { margin: 6px 0; padding-left: 2px; }
+.points li::marker { color: var(--accent); }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0 0; padding: 0; }
+.tags li { font-size: 0.78rem; font-weight: 640; color: var(--accent); background: var(--accent-soft); padding: 5px 10px; border-radius: 999px; }
+
+/* Projects */
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.project { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
+.project.featured { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+.preview {
+  background-color: var(--deep);
+  background-image: radial-gradient(rgba(160, 222, 222, 0.10) 1px, transparent 1.5px);
+  background-size: 20px 20px;
+  display: grid; place-items: center; padding: 18px; min-height: 220px;
+}
+.preview svg { width: 100%; max-width: 330px; height: auto; }
+.project-body { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 10px; }
+.project-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 0.84rem; color: var(--muted); font-weight: 600; }
+.status { color: #8A5200; background: #FCEBCB; padding: 4px 10px; border-radius: 999px; font-size: 0.76rem; font-weight: 680; }
+@media (prefers-color-scheme: dark) { .status { color: var(--heat-soft); background: #3A2A10; } }
+.project h3 { margin: 0; font-size: 1.42rem; font-weight: 760; font-stretch: 114%; line-height: 1.15; }
+.project p { margin: 0; }
+.stack { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin: 4px 0 0; padding: 0; }
+.stack li { font-size: 0.8rem; font-weight: 560; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 10px; }
+.link-btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  font-size: 0.92rem; font-weight: 650; color: var(--accent);
+  border: 1px solid var(--line); border-radius: 999px; padding: 10px 15px; transition: border-color .2s, background .2s;
+}
+.link-btn .ic { width: 16px; height: 16px; }
+.link-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+/* Project previews (illustrations) */
+.pv { overflow: visible; }
+.pv .ln { fill: none; stroke: rgba(234, 244, 244, 0.32); stroke-width: 1.4; }
+.pv .card { fill: rgba(255, 255, 255, 0.06); stroke: rgba(234, 244, 244, 0.2); stroke-width: 1.2; }
+.pv .txt { fill: rgba(234, 244, 244, 0.28); }
+.pv .txt-strong { fill: rgba(234, 244, 244, 0.7); }
+.pv .trk { fill: rgba(255, 255, 255, 0.1); }
+.pv .f-flow { fill: var(--flow); }
+.pv .f-heat { fill: var(--heat); }
+.pv .f-soft { fill: rgba(79, 209, 197, 0.45); }
+.pv .s-flow { fill: none; stroke: var(--flow); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.pv .ringtrack { fill: none; stroke: rgba(255, 255, 255, 0.12); stroke-width: 8; }
+.pv .ringval { fill: none; stroke: var(--flow); stroke-width: 8; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 36; }
+.pv .gx, .pv .gy, .pv .pop, .pv .eye, .pv .mark { transform-box: fill-box; }
+.pv .gx { transform-origin: left center; }
+.pv .gy { transform-origin: center bottom; }
+.pv .pop, .pv .eye, .pv .mark { transform-origin: center; }
+.pv .draw { stroke-dasharray: 1; stroke-dashoffset: 0; }
+.motion .pv .gx { transform: scaleX(0); }
+.motion .pv .gy { transform: scaleY(0); }
+.motion .pv .pop, .motion .pv .mark, .motion .pv .float { opacity: 0; }
+.motion .pv .ringval { stroke-dashoffset: 100; }
+.motion .pv .draw { stroke-dashoffset: 1; }
+.motion .in-view .pv .gx { animation: gx 1s var(--d, 0s) var(--ease) forwards; }
+.motion .in-view .pv .gy { animation: gy .9s var(--d, 0s) var(--ease) forwards; }
+.motion .in-view .pv .pop { animation: pop .45s var(--d, 0s) var(--ease) forwards; }
+.motion .in-view .pv .float { animation: rise .7s var(--d, 0s) var(--ease) forwards; }
+.motion .in-view .pv .ringval { animation: ringval 1.2s .25s var(--ease) forwards; }
+.motion .in-view .pv .draw { animation: draw 1.4s .5s var(--ease) forwards; }
+.motion .in-view .pv .stamp { animation: stamp 1.5s .5s 3 cubic-bezier(.55, 0, .35, 1); }
+.motion .in-view .pv .mark { animation: pop .4s 1.05s var(--ease) forwards; }
+.motion .in-view .pv .eye { animation: blink 3s 1.2s 3; }
+@keyframes gx { to { transform: scaleX(1); } }
+@keyframes gy { to { transform: scaleY(1); } }
+@keyframes pop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes ringval { to { stroke-dashoffset: 36; } }
+@keyframes stamp { 0%, 100% { transform: translateY(0); } 42%, 52% { transform: translateY(58px); } }
+@keyframes blink { 0%, 46%, 54%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.1); } }
+
+/* Skills */
+.skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.skill-group { border-top: 1px solid var(--line); padding: 22px 0 26px; }
+.skill-group h3 { display: flex; align-items: center; gap: 11px; margin: 0 0 14px; font-size: 1.06rem; font-weight: 720; font-stretch: 108%; }
+.skill-group h3 .ic { width: 20px; height: 20px; color: var(--accent); }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.chips li { font-size: 0.88rem; font-weight: 520; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+
+/* Education, certifications, languages */
+.edu-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) minmax(0, .8fr); gap: 0 44px; }
+.edu-col { border-top: 1px solid var(--line); padding-top: 22px; }
+.edu-col h3 { margin: 0 0 14px; font-size: 1.06rem; font-weight: 720; font-stretch: 108%; }
+.edu-item + .edu-item { margin-top: 18px; }
+.edu-item b { display: block; font-weight: 660; line-height: 1.35; }
+.edu-item span { display: block; color: var(--muted); font-size: 0.92rem; }
+.edu-item .note { margin-top: 4px; font-size: 0.88rem; }
+.cert-note { margin: 12px 0 0; color: var(--muted); font-size: 0.88rem; }
+.lang-row + .lang-row { margin-top: 16px; }
+.lang-row b { font-weight: 660; }
+.lang-row span { color: var(--muted); margin-left: 8px; }
+.cefr { display: flex; gap: 4px; margin-top: 8px; }
+.cefr i { flex: 1; height: 7px; border-radius: 4px; background: var(--line); }
+.cefr i.on { background: var(--accent); }
+.cefr-l { display: flex; justify-content: space-between; margin-top: 4px; font-size: 0.72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Contact band */
+.contact-band {
+  margin-top: 104px; scroll-margin-top: 70px;
+  background-color: var(--deep);
+  background-image: radial-gradient(rgba(160, 222, 222, 0.11) 1px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: var(--on-deep);
+}
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 40px; align-items: center; padding-top: 72px; padding-bottom: 76px; }
+.contact-band h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-stretch: 125%; }
+.contact-band .lead { color: var(--on-deep-soft); }
+.big-rows { display: grid; gap: 12px; }
+.big-row { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--deep-line); background: rgba(255, 255, 255, 0.03); min-width: 0; }
+.big-row > .ic { width: 22px; height: 22px; color: var(--flow); }
+.big-row a { flex: 1; min-width: 0; color: var(--on-deep); text-decoration: none; font-size: clamp(1rem, 2.4vw, 1.3rem); font-weight: 640; overflow-wrap: anywhere; }
+.big-row a:hover { color: var(--flow); }
+.contact-band .cta-row { margin-top: 6px; }
+.foot { text-align: center; color: var(--on-deep-muted); font-size: 0.82rem; padding: 0 0 34px; margin: 0; background: var(--deep); }
+
+/* Global toast */
+.toast {
+  position: fixed; left: 50%; bottom: 22px; z-index: 60; max-width: calc(100vw - 32px);
+  padding: 12px 18px; border-radius: 14px; font-size: 0.92rem; font-weight: 560;
+  background: var(--ink); color: var(--paper); box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
+  opacity: 0; transform: translate(-50%, 12px); pointer-events: none;
+  transition: opacity .3s, transform .35s var(--ease);
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* Page-load sequence (one orchestrated moment) */
+.motion .intro > * { animation: rise .75s var(--ease) both; }
+.motion .intro > :nth-child(2) { animation-delay: .07s; }
+.motion .intro > :nth-child(3) { animation-delay: .14s; }
+.motion .intro > :nth-child(4) { animation-delay: .21s; }
+.motion .intro > :nth-child(5) { animation-delay: .28s; }
+.motion .intro > :nth-child(6) { animation-delay: .35s; }
+.motion .sim { animation: rise .85s .2s var(--ease) both; }
+.motion main.swap { animation: swap .35s var(--ease); }
+@keyframes swap { from { opacity: .2; } to { opacity: 1; } }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1020px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 44px; padding-top: 44px; padding-bottom: 60px; }
+  .sim { max-width: 560px; width: 100%; }
+}
+@media (max-width: 900px) {
+  .bar-nav { display: none; }
+  .bar-actions { margin-left: auto; }
+  .edu-grid { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}
+@media (max-width: 820px) {
+  .projects { grid-template-columns: minmax(0, 1fr); }
+  .project.featured { grid-template-columns: minmax(0, 1fr); }
+  .skills-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .wrap, .bar-in { padding-left: 18px; padding-right: 18px; }
+  .bar-in { gap: 10px; min-height: 58px; }
+  .bar-name { font-size: 14px; }
+  .btn-bar .long { display: none; }
+  .btn-bar .short { display: inline; }
+  .hero-grid { padding-top: 34px; padding-bottom: 48px; }
+  .photo { width: 84px; height: 84px; }
+  .name { margin-top: 24px; }
+  .contact-list { flex-direction: column; gap: 10px; }
+  .cta-row .btn { flex: 1 1 auto; justify-content: center; }
+  .sim { padding: 16px 14px 16px; border-radius: 18px; }
+  .kpi { padding: 9px 9px 10px; }
+  .kpi-v { font-size: 1.22rem; }
+  .sec { padding-top: 72px; }
+  .timeline { padding-left: 32px; }
+  .rail { left: 7px; }
+  .rail-dot { left: -32px; width: 14px; height: 14px; }
+  .job-card { padding: 20px 18px; }
+  .project-body { padding: 20px 18px 22px; }
+  .big-row { padding: 12px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="bar dark" id="bar">
+  <div class="bar-in">
+    <button class="bar-name" type="button" data-go="top">Víctor Corchado</button>
+    <nav class="bar-nav" id="nav" data-i18n-aria="navAria" aria-label="Secciones">
+      <button type="button" data-go="exp" data-i18n="nav.exp">Experiencia</button>
+      <button type="button" data-go="proj" data-i18n="nav.proj">Proyectos</button>
+      <button type="button" data-go="skills" data-i18n="nav.skills">Habilidades</button>
+      <button type="button" data-go="edu" data-i18n="nav.edu">Formación</button>
+      <button type="button" data-go="contact" data-i18n="nav.contact">Contacto</button>
+      <span class="nav-ind" id="nav-ind" aria-hidden="true"></span>
+    </nav>
+    <div class="bar-actions">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set="es" aria-label="Ver en español">ES</button>
+        <button type="button" data-set="en" aria-label="View in English">EN</button>
+      </div>
+      <button class="btn btn-primary btn-bar" type="button" data-pdf><i data-icon="download"></i><span class="long" data-i18n="pdf">Descargar CV en PDF</span><span class="short">PDF</span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero dark" id="top">
+  <div class="wrap hero-grid">
+    <div class="intro">
+      <img class="photo" id="photo" src="photo.jpg" alt="Foto de Víctor Corchado Guirao" width="100" height="100">
+      <h1 class="name" id="name">Víctor Corchado Guirao</h1>
+      <p class="role" id="role"></p>
+      <p class="summary" id="summary"></p>
+      <ul class="contact-list">
+        <li><i data-icon="phone"></i><a href="tel:+34615106907">+34 615 10 69 07</a><button class="copy" type="button" data-copy="+34 615 10 69 07" data-i18n-aria="copyPhone"><i data-icon="copy"></i></button></li>
+        <li><i data-icon="mail"></i><a href="mailto:victor.corchadog@gmail.com">victor.corchadog@gmail.com</a><button class="copy" type="button" data-copy="victor.corchadog@gmail.com" data-i18n-aria="copyEmail"><i data-icon="copy"></i></button></li>
+        <li><i data-icon="profile"></i><a href="https://www.linkedin.com/in/victor-corchado-guirao" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><i data-icon="code"></i><a href="https://github.com/vctr1313" target="_blank" rel="noopener">github.com/vctr1313</a></li>
+        <li><i data-icon="pin"></i><span data-i18n="location">Madrid, España</span></li>
+      </ul>
+      <div class="cta-row">
+        <button class="btn btn-primary" type="button" data-pdf><i data-icon="download"></i><span data-i18n="pdf">Descargar CV en PDF</span></button>
+        <button class="btn btn-ghost" type="button" data-go="proj" data-i18n="seeProjects">Ver proyectos</button>
+      </div>
+    </div>
+
+    <figure class="sim" id="sim">
+      <div class="sim-head">
+        <p class="sim-title" data-i18n="simTitle">Simulación: proceso Purchase to Pay</p>
+        <span class="live"><i aria-hidden="true"></i><span data-i18n="live">En vivo</span></span>
+      </div>
+      <p class="sim-sub" data-i18n="simSub"></p>
+      <div class="sim-stage">
+        <svg id="sim-svg" viewBox="0 0 380 440" role="img" data-i18n-aria="simAria"></svg>
+        <div class="sim-toast" id="sim-toast" role="status" aria-live="polite"></div>
+      </div>
+      <div class="kpis">
+        <div class="kpi" id="kpi-paid"><span class="kpi-l" data-i18n="kpiPaid">Pedidos pagados</span><span class="kpi-v" id="k-paid">0</span></div>
+        <div class="kpi" id="kpi-cycle"><span class="kpi-l" data-i18n="kpiCycle">Ciclo medio</span><span class="kpi-v"><span id="k-cycle">0</span><small data-i18n="days">días</small></span></div>
+        <div class="kpi" id="kpi-ontime"><span class="kpi-l" data-i18n="kpiOnTime">Pagos a tiempo</span><span class="kpi-v" id="k-ontime">0</span></div>
+      </div>
+      <div class="sim-foot">
+        <label class="switch hint" id="flows-label">
+          <input type="checkbox" id="flows" role="switch">
+          <span class="track" aria-hidden="true"><span class="thumb"></span></span>
+          <span class="switch-text"><b>Action flows</b><small data-i18n="flowsHint">Aviso por Teams cuando una factura se bloquea</small></span>
+        </label>
+        <button class="pql-btn" type="button" id="pql-btn" aria-expanded="false" aria-controls="pql">Ver el PQL</button>
+      </div>
+      <div class="pql" id="pql" hidden>
+        <p data-i18n="pqlCap"></p>
+        <pre><code><span class="fn">AVG</span>(<span class="fn">CALC_THROUGHPUT</span>(<span class="kw">CASE_START</span> <span class="kw">TO</span> <span class="kw">CASE_END</span>,
+  <span class="fn">REMAP_TIMESTAMPS</span>(<span class="str">"Activities"</span>.<span class="str">"EVENTTIME"</span>, <span class="kw">DAYS</span>)))</code></pre>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<main id="main">
+  <section class="sec" id="exp" aria-labelledby="h-exp">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-exp" data-i18n="nav.exp">Experiencia</h2></div>
+      <div class="timeline" id="timeline">
+        <div class="rail" aria-hidden="true"><span class="rail-fill" id="rail-fill"></span></div>
+        <div class="jobs" id="jobs"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="proj" aria-labelledby="h-proj">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-proj" data-i18n="nav.proj">Proyectos</h2><p class="lead" data-i18n="projLead"></p></div>
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="skills" aria-labelledby="h-skills">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-skills" data-i18n="nav.skills">Habilidades</h2></div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="edu" aria-labelledby="h-edu">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="h-edu" data-i18n="nav.edu">Formación</h2></div>
+      <div class="edu-grid" id="edu-grid"></div>
+    </div>
+  </section>
+</main>
+
+<section class="contact-band dark" id="contact" aria-labelledby="h-contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 id="h-contact" data-i18n="contactTitle">¿Hablamos?</h2>
+      <p class="lead" data-i18n="contactLead"></p>
+    </div>
+    <div class="big-rows">
+      <div class="big-row"><i data-icon="phone"></i><a href="tel:+34615106907">+34 615 10 69 07</a><button class="copy" type="button" data-copy="+34 615 10 69 07" data-i18n-aria="copyPhone"><i data-icon="copy"></i></button></div>
+      <div class="big-row"><i data-icon="mail"></i><a href="mailto:victor.corchadog@gmail.com">victor.corchadog@gmail.com</a><button class="copy" type="button" data-copy="victor.corchadog@gmail.com" data-i18n-aria="copyEmail"><i data-icon="copy"></i></button></div>
+      <div class="cta-row">
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/victor-corchado-guirao" target="_blank" rel="noopener"><i data-icon="profile"></i>LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/vctr1313" target="_blank" rel="noopener"><i data-icon="code"></i>GitHub</a>
+        <button class="btn btn-primary" type="button" data-pdf><i data-icon="download"></i><span data-i18n="pdf">Descargar CV en PDF</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+<p class="foot" data-i18n="updated">Actualizado en noviembre de 2026.</p>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+"use strict";
+
+/* ===================== Content ===================== */
+const CV = {
+  role: {
+    es: "Delivery Consultant en Deloitte, especializado en process mining con Celonis",
+    en: "Delivery Consultant at Deloitte, focused on Celonis process mining"
+  },
+  summary: {
+    es: "Trabajo en process mining con Celonis en Deloitte: modelos object-centric, dashboards y action flows para Purchase to Pay y Accounts Payable. Antes trabajé en la implantación de DORA y en el reporting FATCA/CRS en Cyber Strategy, y fui responsable del stack tecnológico comercial de Allianz. Me formé como desarrollador de aplicaciones multiplataforma, así que también construyo mis propias herramientas y apps de principio a fin.",
+    en: "I work on Celonis process mining at Deloitte: object-centric models, dashboards and action flows for purchase-to-pay and accounts payable. Before that I worked on DORA implementation and FATCA/CRS reporting in Cyber Strategy, and was responsible for the sales technology stack at Allianz. I trained as a multiplatform app developer, so I also build my own tools and apps end to end."
+  },
+  jobs: [
+    {
+      company: "Deloitte", team: "Process Mining", current: true,
+      place: { es: "Madrid, híbrido", en: "Madrid, hybrid" },
+      roles: [
+        { title: "Delivery Consultant", from: { es: "jul. 2026", en: "Jul 2026" }, to: "present" },
+        { title: "Delivery Analyst", from: { es: "dic. 2025", en: "Dec 2025" }, to: { es: "jul. 2026", en: "Jul 2026" } }
+      ],
+      points: {
+        es: [
+          "Desarrollo y optimizo soluciones de process mining en Celonis para Purchase to Pay y Accounts Payable.",
+          "Implanto el enfoque object-centric (OCPM) y migro análisis y modelos case-centric a object-centric, simplificando soluciones complejas y orientándolas a negocio.",
+          "Diseño vistas interactivas y dashboards con KPIs en PQL para analizar, seguir y reportar cada caso de uso.",
+          "Automatizo procesos con action flows y avisos automáticos por Microsoft Teams y correo a los responsables de cada proceso."
+        ],
+        en: [
+          "Build and optimize Celonis process mining solutions for purchase-to-pay and accounts payable.",
+          "Implement object-centric process mining (OCPM) and migrate case-centric analyses and models to object-centric ones, simplifying complex solutions and making them more business-oriented.",
+          "Design interactive views and dashboards with PQL KPIs to analyze, track and report each use case.",
+          "Automate processes with action flows and automatic Microsoft Teams and email alerts to each process owner."
+        ]
+      },
+      tags: ["Celonis", "PQL", "OCPM", "Action Flows", "Purchase to Pay", "Accounts Payable"]
+    },
+    {
+      company: "Allianz España", team: null,
+      place: { es: "Madrid, híbrido", en: "Madrid, hybrid" },
+      roles: [ { title: "Tech Sales Ecosystem Analyst", from: { es: "may. 2025", en: "May 2025" }, to: { es: "dic. 2025", en: "Dec 2025" } } ],
+      points: {
+        es: [ "Responsable del stack tecnológico del departamento comercial.", "Desarrollo de equipos de ventas y gestión ágil de proyectos." ],
+        en: [ "Responsible for the sales department's technology stack.", "Sales team development and agile project management." ]
+      },
+      tags: [ { es: "Stack comercial", en: "Sales tech stack" }, { es: "Gestión ágil", en: "Agile" } ]
+    },
+    {
+      company: "Deloitte", team: "Risk Advisory",
+      place: { es: "Madrid", en: "Madrid" },
+      roles: [
+        { title: "Consultant, Cyber Strategy", from: { es: "2024", en: "2024" }, to: { es: "may. 2025", en: "May 2025" } },
+        { title: "Risk Advisory Consultant", from: { es: "2023", en: "2023" }, to: { es: "2024", en: "2024" } }
+      ],
+      points: {
+        es: [
+          "Implantación de DORA: gestión del riesgo TIC y de la externalización TIC, inventario de proveedores y análisis GAP.",
+          "Políticas y procedimientos para cumplir DORA y las directrices de EBA y EIOPA.",
+          "Remediación de documentación FATCA, CRS, ITF y QI, y herramientas en Visual Basic y Python que generan el reporting regulatorio de forma automática.",
+          "Auditorías de TI, revisiones de control de los sistemas que soportan los procesos de negocio y apoyo a PMOs.",
+          "Revisiones de juntas generales de accionistas."
+        ],
+        en: [
+          "DORA implementation: ICT risk and ICT third-party management, a supplier register and gap analysis.",
+          "Policies and procedures for compliance with DORA and EBA and EIOPA guidelines.",
+          "FATCA, CRS, ITF and QI documentation remediation, plus Visual Basic and Python tools that generate regulatory reporting automatically.",
+          "IT audits, control reviews of the systems behind business processes, and PMO support.",
+          "Reviews of annual general shareholders' meetings."
+        ]
+      },
+      tags: [ "DORA", "EBA / EIOPA", "FATCA / CRS", "Python", "VBA", { es: "Auditoría de TI", en: "IT audit" } ]
+    },
+    {
+      company: "speedpark", team: null,
+      place: { es: "Torrejón de Ardoz", en: "Torrejón de Ardoz" },
+      roles: [ { title: { es: "Jefe de sección", en: "Section manager" }, from: { es: "abr. 2022", en: "Apr 2022" }, to: { es: "sept. 2022", en: "Sep 2022" } } ],
+      points: null, tags: null
+    }
+  ],
+  projects: [
+    {
+      id: "miplan", name: "Mi Plan Financiero", featured: true,
+      kind: { es: "App web progresiva", en: "Progressive web app" },
+      text: {
+        es: "App de finanzas personales que uso a diario en el móvil: presupuesto por ciclos de nómina, botes de ahorro, simulador de hipoteca y cuentas vinculadas en pareja con los datos de cada uno protegidos.",
+        en: "Personal finance app I use daily on my phone: paycheck-based budget cycles, savings pots, a mortgage simulator and linked partner accounts that keep each person's data private."
+      },
+      stack: [ "React", "Supabase", "PostgreSQL", { es: "Seguridad a nivel de fila", en: "Row-level security" }, "Vercel", "PWA" ],
+      links: [
+        { icon: "external", label: { es: "Abrir la app", en: "Open the app" }, href: "https://miplan-financiero.vercel.app" },
+        { icon: "code", label: { es: "Ver el código", en: "View the code" }, href: "https://github.com/vctr1313/miplan-financiero" }
+      ]
+    },
+    {
+      id: "vestuario", name: "VESTUARIO",
+      kind: { es: "Plantilla de Google Sheets", en: "Google Sheets template" },
+      text: {
+        es: "Plantilla para equipos de fútbol amateur: estadísticas, asistencia, cuotas, multas y caja del equipo en diez hojas enlazadas, con un panel que se actualiza solo.",
+        en: "Template for amateur football teams: player stats, attendance, monthly fees, fines and the team fund across ten linked sheets, with a self-updating dashboard."
+      },
+      stack: [ "Google Sheets", { es: "Fórmulas", en: "Formulas" }, { es: "Validación de datos", en: "Data validation" }, { es: "Formato condicional", en: "Conditional formatting" } ]
+    },
+    {
+      id: "redundant", name: "Redundant Office",
+      kind: { es: "Videojuego para PC (Steam)", en: "PC game (Steam)" },
+      status: { es: "En desarrollo", en: "In development" },
+      text: {
+        es: "Juego en el que automatizas tu propio trabajo en un banco ficticio: empiezas revisando expedientes a mano y acabas haciéndolo con bots.",
+        en: "A game where you automate your own job at a fictional bank: you start by reviewing files by hand and end up doing it with bots."
+      }
+    }
+  ],
+  skills: [
+    { icon: "flow", name: { es: "Process mining", en: "Process mining" }, items: [ "Celonis OCPM", "PQL", "Knowledge Models", { es: "Vistas y dashboards", en: "Views and dashboards" }, "Action Flows", "Purchase to Pay", "Accounts Payable" ] },
+    { icon: "chart", name: { es: "Datos y BI", en: "Data and BI" }, items: [ "SQL", "Python (Pandas)", "Power BI", "VBA", "SAP (P2P, BW/HANA)", { es: "Excel y Google Sheets avanzados", en: "Advanced Excel and Google Sheets" } ] },
+    { icon: "shield", name: { es: "Regulación y riesgo", en: "Regulation and risk" }, items: [ "DORA", { es: "EBA y EIOPA", en: "EBA and EIOPA" }, "FATCA / CRS", { es: "ITF y QI", en: "ITF and QI" }, "DAC8", "ISO 27001", "Magerit", { es: "Auditoría de TI", en: "IT audit" } ] },
+    { icon: "code", name: { es: "Desarrollo", en: "Software" }, items: [ "React", "Next.js", "Node.js", "Supabase", "PostgreSQL", "Prisma", "Java (Android)", "Godot" ] }
+  ],
+  education: [
+    {
+      degree: { es: "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (CFGS DAM)", en: "Higher Technician in Multiplatform Application Development (CFGS DAM)" },
+      school: "iFP Innovación en Formación Profesional",
+      years: { es: "sept. 2021 – jun. 2023", en: "Sep 2021 – Jun 2023" },
+      note: { es: "Proyecto final: Viravi, red social de eventos para Android hecha en Java y Firebase en un equipo de tres.", en: "Final project: Viravi, an Android social-events app built in Java with Firebase in a team of three." }
+    },
+    {
+      degree: { es: "Bachillerato de Ciencias", en: "Bachillerato (upper secondary), sciences" },
+      school: "IES Valle-Inclán",
+      years: { es: "2019 – 2021", en: "2019 – 2021" }
+    }
+  ],
+  certs: {
+    items: [ "SAP Basis Essential", "Power Platform", "Microsoft SharePoint", "SQL Bootcamp", "Python (Pandas)", "Microsoft Power BI" ],
+    note: { es: "Cursos de Udemy, 2023.", en: "Udemy courses, 2023." }
+  },
+  languages: [
+    { name: { es: "Español", en: "Spanish" }, level: { es: "Nativo", en: "Native" } },
+    { name: { es: "Inglés", en: "English" }, level: { es: "B2", en: "B2" }, cefr: 4 }
+  ]
+};
+
+const UI = {
+  es: {
+    navAria: "Secciones",
+    nav: { exp: "Experiencia", proj: "Proyectos", skills: "Habilidades", edu: "Formación", contact: "Contacto" },
+    pdf: "Descargar CV en PDF",
+    pdfSaved: "Descargando el CV en PDF…",
+    pdfDeclined: "Descarga cancelada.",
+    pdfRate: "Ya hay una descarga abierta. Espera un momento y vuelve a intentarlo.",
+    pdfError: "No se ha podido descargar el PDF. Vuelve a intentarlo.",
+    pdfUnavailable: "La descarga no está disponible en esta vista.",
+    seeProjects: "Ver proyectos",
+    location: "Madrid, España",
+    photoAlt: "Foto de Víctor Corchado Guirao",
+    copyPhone: "Copiar teléfono",
+    copyEmail: "Copiar correo",
+    copied: "Copiado al portapapeles.",
+    copyFail: "No se ha podido copiar. Selecciona el texto y cópialo.",
+    simTitle: "Simulación: proceso Purchase to Pay",
+    live: "En vivo",
+    simSub: "Así trabajo: encuentro el cuello de botella y lo automatizo. Activa los action flows y mira cómo cambian los KPIs.",
+    simAria: "Mapa de proceso animado: pedidos que avanzan desde la creación hasta el pago, con desvíos por cambios de precio y facturas bloqueadas.",
+    kpiPaid: "Pedidos pagados",
+    kpiCycle: "Ciclo medio",
+    kpiOnTime: "Pagos a tiempo",
+    days: "días",
+    flowsHint: "Aviso por Teams cuando una factura se bloquea",
+    showPql: "Ver el PQL",
+    hidePql: "Ocultar el PQL",
+    pqlCap: "El KPI de ciclo medio, escrito en PQL para Celonis:",
+    simToast: (n) => `Aviso enviado por Teams: factura ${n} bloqueada`,
+    nodes: { po: "Crear pedido", price: "Cambio de precio", gr: "Recibir mercancía", inv: "Registrar factura", block: "Factura bloqueada", pay: "Pagar factura" },
+    projLead: "Apps y herramientas que he diseñado y programado de principio a fin.",
+    now: "Ahora",
+    present: "actualidad",
+    tagsAria: "Herramientas y temas",
+    degrees: "Estudios",
+    certs: "Certificaciones",
+    langs: "Idiomas",
+    cefrAria: (lvl) => `Nivel ${lvl} del Marco Común Europeo`,
+    contactTitle: "¿Hablamos?",
+    contactLead: "Llámame o escríbeme cuando quieras. Si lo necesitas en papel, aquí tienes mi CV en PDF.",
+    updated: "Actualizado en noviembre de 2026.",
+    locale: "es-ES"
+  },
+  en: {
+    navAria: "Sections",
+    nav: { exp: "Experience", proj: "Projects", skills: "Skills", edu: "Education", contact: "Contact" },
+    pdf: "Download CV as PDF",
+    pdfSaved: "Downloading the CV as a PDF…",
+    pdfDeclined: "Download cancelled.",
+    pdfRate: "A download is already open. Wait a moment and try again.",
+    pdfError: "The PDF couldn't be downloaded. Try again.",
+    pdfUnavailable: "Downloads aren't available in this view.",
+    seeProjects: "See projects",
+    location: "Madrid, Spain",
+    photoAlt: "Photo of Víctor Corchado Guirao",
+    copyPhone: "Copy phone number",
+    copyEmail: "Copy email",
+    copied: "Copied to clipboard.",
+    copyFail: "Couldn't copy. Select the text and copy it.",
+    simTitle: "Simulation: purchase-to-pay process",
+    live: "Live",
+    simSub: "How I work: find the bottleneck, then automate it. Turn on action flows and watch the KPIs change.",
+    simAria: "Animated process map: purchase orders moving from creation to payment, with detours for price changes and blocked invoices.",
+    kpiPaid: "Paid orders",
+    kpiCycle: "Avg. cycle time",
+    kpiOnTime: "On-time payments",
+    days: "days",
+    flowsHint: "Teams alert when an invoice gets blocked",
+    showPql: "Show the PQL",
+    hidePql: "Hide the PQL",
+    pqlCap: "The cycle time KPI, written in PQL for Celonis:",
+    simToast: (n) => `Teams alert sent: invoice ${n} is blocked`,
+    nodes: { po: "Create PO", price: "Change price", gr: "Receive goods", inv: "Record invoice", block: "Invoice blocked", pay: "Pay invoice" },
+    projLead: "Apps and tools I've designed and built end to end.",
+    now: "Now",
+    present: "present",
+    tagsAria: "Tools and topics",
+    degrees: "Degrees",
+    certs: "Certifications",
+    langs: "Languages",
+    cefrAria: (lvl) => `CEFR level ${lvl}`,
+    contactTitle: "Let's talk",
+    contactLead: "Call or email me anytime. If you need it on paper, here's my CV as a PDF.",
+    updated: "Updated November 2026.",
+    locale: "en-GB"
+  }
+};
+
+/* ===================== Helpers ===================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c]));
+const pick = (v, l) => (v && typeof v === "object" && !Array.isArray(v)) ? v[l] : v;
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduce) document.documentElement.classList.add("motion");
+let lang = "es";
+
+const ICONS = {
+  phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+  pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+  profile: '<rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10.5" r="2.2"/><path d="M5.6 16.5c.7-1.7 1.9-2.5 3.4-2.5s2.7.8 3.4 2.5M15 9.5h3.5M15 13h3.5"/>',
+  code: '<path d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/>',
+  download: '<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>',
+  copy: '<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/>',
+  check: '<path d="m5 12 5 5L20 7"/>',
+  external: '<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',
+  flow: '<circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/>',
+  chart: '<path d="M4 20V11M10 20V5M16 20v-7M21 20H3"/>',
+  shield: '<path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/>',
+  message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>'
+};
+const icon = (n) => `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${ICONS[n]}</svg>`;
+function paintIcons(root = document) {
+  $$("i[data-icon]", root).forEach((el) => { el.outerHTML = icon(el.dataset.icon); });
+}
+
+let toastTimer = 0;
+function toast(msg) {
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2800);
+}
+
+/* ===================== Project illustrations ===================== */
+const PREVIEW = {
+  miplan() {
+    const bars = [[0.8, "f-flow"], [0.46, "f-heat"], [0.64, "f-soft"]].map(([w, c], i) => {
+      const y = 118 + i * 14;
+      return `<rect x="106" y="${y}" width="68" height="7" rx="3.5" class="trk"/><rect x="106" y="${y}" width="${(68 * w).toFixed(1)}" height="7" rx="3.5" class="${c} gx" style="--d:${0.45 + i * 0.12}s"/>`;
+    }).join("");
+    const days = Array.from({ length: 6 }, (_, i) => `<rect x="${30 + i * 9}" y="72" width="7" height="7" rx="2" class="${i < 4 ? "f-flow" : "trk"} pop" style="--d:${0.6 + i * 0.07}s"/>`).join("");
+    return `<svg class="pv" viewBox="0 0 280 200" aria-hidden="true">
+      <g class="float" style="--d:.35s"><rect x="18" y="52" width="80" height="58" rx="11" class="card"/><rect x="30" y="62" width="34" height="5" rx="2.5" class="txt"/>${days}<rect x="30" y="88" width="52" height="5" rx="2.5" class="trk"/><rect x="30" y="88" width="35" height="5" rx="2.5" class="f-flow gx" style="--d:.9s"/></g>
+      <rect x="95" y="10" width="90" height="180" rx="17" class="card"/>
+      <rect x="125" y="17" width="30" height="4" rx="2" class="txt"/>
+      <rect x="106" y="32" width="34" height="5" rx="2.5" class="txt"/>
+      <rect x="106" y="41" width="52" height="9" rx="3" class="txt-strong"/>
+      <circle cx="140" cy="82" r="20" class="ringtrack"/>
+      <circle cx="140" cy="82" r="20" class="ringval" pathLength="100" transform="rotate(-90 140 82)"/>
+      ${bars}
+      <polyline points="106,178 116,172 126,174 136,166 146,163 156,157 166,159 174,151" class="s-flow draw" pathLength="1"/>
+      <g class="float" style="--d:.55s"><rect x="186" y="118" width="80" height="54" rx="11" class="card"/><circle cx="208" cy="145" r="11" class="f-soft"/><circle cx="222" cy="145" r="11" fill="rgba(245,165,36,.45)"/><rect x="241" y="143" width="13" height="10" rx="2.5" class="txt-strong"/><path d="M243.5 143v-3a4 4 0 0 1 8 0v3" class="ln"/></g>
+    </svg>`;
+  },
+  vestuario() {
+    const x0 = 22, y0 = 20, W = 236, nameW = 62, cols = 6, rows = 6, rh = 22;
+    const cw = (W - nameW) / cols;
+    const hot = { "0-1": "f-flow", "1-4": "f-heat", "2-2": "f-flow", "3-5": "f-soft", "4-0": "f-heat", "4-3": "f-flow", "5-1": "f-soft", "2-5": "f-flow", "1-0": "f-soft", "5-4": "f-flow" };
+    let cells = "";
+    let n = 0;
+    for (let r = 0; r < rows; r++) {
+      const y = y0 + 20 + r * rh;
+      cells += `<rect x="${x0 + 10}" y="${y + 8}" width="${[38, 30, 44, 34, 40, 28][r]}" height="5" rx="2.5" class="txt"/>`;
+      for (let c = 0; c < cols; c++) {
+        const x = x0 + nameW + c * cw;
+        const k = `${r}-${c}`;
+        if (hot[k]) {
+          cells += `<rect x="${(x + 3).toFixed(1)}" y="${y + 4}" width="${(cw - 6).toFixed(1)}" height="${rh - 8}" rx="3" class="${hot[k]} pop" style="--d:${(0.4 + n * 0.09).toFixed(2)}s"/>`;
+          n++;
+        } else {
+          cells += `<rect x="${(x + 8).toFixed(1)}" y="${y + 8}" width="${(cw - 16).toFixed(1)}" height="5" rx="2.5" class="trk"/>`;
+        }
+      }
+    }
+    let grid = "";
+    for (let c = 0; c <= cols; c++) { const x = (x0 + nameW + c * cw).toFixed(1); grid += `<path d="M${x} ${y0} V${y0 + 20 + rows * rh}" class="ln" opacity=".45"/>`; }
+    for (let r = 0; r <= rows; r++) { const y = y0 + 20 + r * rh; grid += `<path d="M${x0} ${y} H${x0 + W}" class="ln" opacity=".45"/>`; }
+    const tabs = Array.from({ length: 5 }, (_, i) => `<rect x="${x0 + i * 34}" y="178" width="30" height="10" rx="3" class="${i === 0 ? "f-flow" : "trk"}"/>`).join("");
+    return `<svg class="pv" viewBox="0 0 280 200" aria-hidden="true">
+      <rect x="${x0}" y="${y0}" width="${W}" height="${20 + rows * rh}" rx="8" class="card"/>
+      <rect x="${x0}" y="${y0}" width="${W}" height="20" rx="8" fill="rgba(79,209,197,.16)"/>
+      ${grid}${cells}${tabs}
+    </svg>`;
+  },
+  redundant() {
+    return `<svg class="pv" viewBox="0 0 280 200" aria-hidden="true">
+      <rect x="22" y="22" width="110" height="8" rx="4" class="trk"/><rect x="22" y="22" width="88" height="8" rx="4" class="f-flow gx" style="--d:.5s;animation-duration:4.4s"/>
+      <path d="M18 174 H262" class="ln"/>
+      <rect x="62" y="102" width="122" height="70" rx="7" class="card"/>
+      <rect x="68" y="94" width="122" height="70" rx="7" class="card"/>
+      <rect x="74" y="86" width="122" height="72" rx="7" fill="#123F47" stroke="rgba(234,244,244,.3)" stroke-width="1.2"/>
+      <rect x="86" y="98" width="24" height="28" rx="4" class="txt"/>
+      <rect x="118" y="100" width="58" height="5" rx="2.5" class="txt-strong"/>
+      <rect x="118" y="111" width="44" height="5" rx="2.5" class="txt"/>
+      <rect x="118" y="122" width="52" height="5" rx="2.5" class="txt"/>
+      <rect x="86" y="136" width="68" height="5" rx="2.5" class="txt"/>
+      <g class="mark"><circle cx="170" cy="126" r="13" fill="#123F47" stroke="var(--flow)" stroke-width="2.4"/><path d="m164 126 4.2 4.2 8-8.4" class="s-flow"/></g>
+      <g class="stamp"><rect x="162" y="22" width="16" height="26" rx="5" fill="#D9E6E6"/><rect x="150" y="47" width="40" height="12" rx="3" class="f-heat"/></g>
+      <g>
+        <path d="M230 104 V96" class="ln"/><circle cx="230" cy="93" r="3.5" class="f-heat"/>
+        <rect x="212" y="104" width="36" height="30" rx="9" fill="rgba(79,209,197,.14)" stroke="var(--flow)" stroke-width="1.6"/>
+        <rect x="221" y="114" width="5" height="8" rx="2.5" class="f-flow eye"/><rect x="234" y="114" width="5" height="8" rx="2.5" class="f-flow eye"/>
+        <rect x="216" y="139" width="28" height="33" rx="7" class="card"/>
+        <path d="M216 148 L198 140" class="ln" stroke-width="2"/>
+      </g>
+    </svg>`;
+  }
+};
+
+/* ===================== Renderers ===================== */
+function renderJobs(l) {
+  const T = UI[l];
+  return CV.jobs.map((j) => {
+    const roles = j.roles.map((r) => `<li><span class="title">${esc(pick(r.title, l))}</span><span class="when">${esc(pick(r.from, l))} – ${esc(r.to === "present" ? T.present : pick(r.to, l))}</span></li>`).join("");
+    const pts = j.points ? `<ul class="points">${j.points[l].map((p) => `<li>${esc(p)}</li>`).join("")}</ul>` : "";
+    const tags = j.tags ? `<ul class="tags" aria-label="${esc(T.tagsAria)}">${j.tags.map((x) => `<li>${esc(pick(x, l))}</li>`).join("")}</ul>` : "";
+    const team = j.team ? ` <span class="team">${esc(j.team)}</span>` : "";
+    const now = j.current ? `<span class="now"><i aria-hidden="true"></i>${esc(T.now)}</span>` : "";
+    return `<article class="job${j.current ? " current" : ""}"><span class="rail-dot" aria-hidden="true"></span><div class="job-card"><div class="job-top"><h3>${esc(j.company)}${team}</h3>${now}</div><p class="place">${esc(pick(j.place, l))}</p><ul class="roles">${roles}</ul>${pts}${tags}</div></article>`;
+  }).join("");
+}
+
+function renderProjects(l) {
+  return CV.projects.map((p) => {
+    const status = p.status ? `<span class="status">${esc(p.status[l])}</span>` : "";
+    const stack = p.stack ? `<ul class="stack">${p.stack.map((s) => `<li>${esc(pick(s, l))}</li>`).join("")}</ul>` : "";
+    const links = p.links ? `<div class="links">${p.links.map((k) => `<a class="link-btn" href="${esc(k.href)}" target="_blank" rel="noopener">${icon(k.icon)}${esc(k.label[l])}</a>`).join("")}</div>` : "";
+    return `<article class="project${p.featured ? " featured" : ""}"><div class="preview" data-preview>${PREVIEW[p.id]()}</div><div class="project-body"><div class="project-meta"><span>${esc(p.kind[l])}</span>${status}</div><h3>${esc(p.name)}</h3><p>${esc(p.text[l])}</p>${stack}${links}</div></article>`;
+  }).join("");
+}
+
+function renderSkills(l) {
+  return CV.skills.map((g) => `<div class="skill-group"><h3>${icon(g.icon)}${esc(g.name[l])}</h3><ul class="chips">${g.items.map((s) => `<li>${esc(pick(s, l))}</li>`).join("")}</ul></div>`).join("");
+}
+
+function renderEdu(l) {
+  const T = UI[l];
+  const degrees = CV.education.map((e) => `<div class="edu-item"><b>${esc(e.degree[l])}</b><span>${esc(e.school)}</span><span>${esc(e.years[l])}</span>${e.note ? `<span class="note">${esc(e.note[l])}</span>` : ""}</div>`).join("");
+  const certs = `<ul class="chips">${CV.certs.items.map((c) => `<li>${esc(c)}</li>`).join("")}</ul><p class="cert-note">${esc(CV.certs.note[l])}</p>`;
+  const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
+  const langs = CV.languages.map((x) => {
+    const scale = x.cefr ? `<div class="cefr" role="img" aria-label="${esc(T.cefrAria(x.level[l]))}">${levels.map((_, i) => `<i class="${i < x.cefr ? "on" : ""}"></i>`).join("")}</div><div class="cefr-l" aria-hidden="true">${levels.map((v) => `<span>${v}</span>`).join("")}</div>` : "";
+    return `<div class="lang-row"><b>${esc(x.name[l])}</b><span>${esc(x.level[l])}</span>${scale}</div>`;
+  }).join("");
+  return `<div class="edu-col"><h3>${esc(T.degrees)}</h3>${degrees}</div><div class="edu-col"><h3>${esc(T.certs)}</h3>${certs}</div><div class="edu-col"><h3>${esc(T.langs)}</h3>${langs}</div>`;
+}
+
+/* ===================== Process simulation ===================== */
+const Sim = (() => {
+  const svg = $("#sim-svg");
+  const H = 38;
+  const NODES = {
+    po: { cx: 120, cy: 40, w: 168 },
+    price: { cx: 296, cy: 95, w: 136, rw: true },
+    gr: { cx: 120, cy: 150, w: 168 },
+    inv: { cx: 120, cy: 260, w: 168 },
+    block: { cx: 296, cy: 315, w: 136, rw: true },
+    pay: { cx: 120, cy: 370, w: 168 }
+  };
+  const Ln = (x1, y1, x2, y2) => ({ d: `M${x1} ${y1} L${x2} ${y2}`, at: (t) => [x1 + (x2 - x1) * t, y1 + (y2 - y1) * t] });
+  const Cu = (a, b, c, d) => ({
+    d: `M${a[0]} ${a[1]} C${b[0]} ${b[1]} ${c[0]} ${c[1]} ${d[0]} ${d[1]}`,
+    at: (t) => {
+      const u = 1 - t, k0 = u * u * u, k1 = 3 * u * u * t, k2 = 3 * u * t * t, k3 = t * t * t;
+      return [k0 * a[0] + k1 * b[0] + k2 * c[0] + k3 * d[0], k0 * a[1] + k1 * b[1] + k2 * c[1] + k3 * d[1]];
+    }
+  });
+  const EDGES = {
+    "s-po": Ln(120, 10, 120, 21),
+    "po-gr": Ln(120, 59, 120, 131),
+    "po-price": Cu([204, 46], [252, 46], [296, 54], [296, 76]),
+    "price-gr": Cu([296, 114], [296, 136], [252, 144], [204, 144]),
+    "gr-inv": Ln(120, 169, 120, 241),
+    "inv-pay": Ln(120, 279, 120, 351),
+    "inv-block": Cu([204, 266], [252, 266], [296, 274], [296, 296]),
+    "block-pay": Cu([296, 334], [296, 356], [252, 364], [204, 364]),
+    "pay-end": Ln(120, 389, 120, 428)
+  };
+  const RW = new Set(["po-price", "price-gr", "inv-block", "block-pay"]);
+  const LABELS = { "po-gr": [131, 99], "gr-inv": [131, 209], "inv-pay": [131, 319], "po-price": [240, 38], "inv-block": [240, 258] };
+  const SPD = 0.085;     // real seconds per simulated day
+  const SPAWN = 2.6;     // simulated days between new purchase orders
+  const WINDOW = 30;     // completed cases used for the KPIs
+
+  let flows = false, time = 0, spawnAcc = 0, paid = 0, lastAlert = 0;
+  const active = [], recent = [], pool = [];
+  const counts = {};
+  Object.keys(EDGES).forEach((k) => { counts[k] = 0; });
+  const rnd = (a, b) => a + Math.random() * (b - a);
+
+  // Build the map once.
+  const parts = [`<defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" class="ar"/></marker>
+    <marker id="ar-rw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" class="ar-rw"/></marker>
+  </defs>`];
+  for (const [id, e] of Object.entries(EDGES)) {
+    const isEnd = id === "pay-end";
+    parts.push(`<path class="edge${RW.has(id) ? " rw" : ""}" data-e="${id}" d="${e.d}" pathLength="1"${isEnd ? "" : ` marker-end="url(#${RW.has(id) ? "ar-rw" : "ar"})"`}/>`);
+  }
+  for (const [id, [x, y]] of Object.entries(LABELS)) parts.push(`<text class="count${RW.has(id) ? " rw" : ""}" data-c="${id}" x="${x}" y="${y}">0</text>`);
+  parts.push(`<circle class="term" cx="120" cy="6" r="4"/><circle class="term" cx="120" cy="432" r="4"/>`);
+  for (const [id, n] of Object.entries(NODES)) {
+    parts.push(`<g class="node${n.rw ? " rw" : ""}"><rect x="${n.cx - n.w / 2}" y="${n.cy - H / 2}" width="${n.w}" height="${H}" rx="10"/><text x="${n.cx}" y="${n.cy}" data-n="${id}"></text></g>`);
+  }
+  parts.push(`<circle class="ping" id="ping" cx="296" cy="315" r="22"/>`);
+  parts.push(`<g class="badge" data-b="price-gr" transform="translate(362 76)"><rect x="-15" y="-10" width="30" height="20" rx="10"/><text>0</text></g>`);
+  parts.push(`<g class="badge" data-b="block-pay" transform="translate(362 296)"><rect x="-15" y="-10" width="30" height="20" rx="10"/><text>0</text></g>`);
+  parts.push(`<g id="toks"${reduce ? "" : ` style="opacity:0"`}></g>`);
+  svg.innerHTML = parts.join("");
+
+  const tokLayer = $("#toks", svg);
+  const edgeEls = {}, countEls = {}, badgeEls = {};
+  $$("[data-e]", svg).forEach((el) => { edgeEls[el.dataset.e] = el; });
+  $$("[data-c]", svg).forEach((el) => { countEls[el.dataset.c] = el; });
+  $$("[data-b]", svg).forEach((el) => { badgeEls[el.dataset.b] = el; });
+  const kPaid = $("#k-paid"), kCycle = $("#k-cycle"), kOnTime = $("#k-ontime");
+  const kpiCycle = $("#kpi-cycle"), kpiOnTime = $("#kpi-ontime");
+  const simToast = $("#sim-toast");
+  let fmtInt, fmtDec, fmtPct;
+
+  function dur(seg) {
+    switch (seg) {
+      case "s-po": case "pay-end": return 0.9;
+      case "po-gr": return rnd(5, 9);
+      case "po-price": return rnd(1.5, 3);
+      case "price-gr": return rnd(5, 8);
+      case "gr-inv": return rnd(2, 5);
+      case "inv-pay": return rnd(14, 32);
+      case "inv-block": return rnd(1.5, 3);
+      case "block-pay": return flows ? rnd(9, 15) : rnd(24, 38);
+      default: return 1;
+    }
+  }
+
+  function spawn(render) {
+    const c = { t0: time, start: time, i: 0, inv: 0, paidAt: 0, flag: false, el: null, painted: false };
+    const price = Math.random() < 0.27, block = Math.random() < 0.36;
+    c.r = ["s-po", ...(price ? ["po-price", "price-gr"] : ["po-gr"]), "gr-inv", ...(block ? ["inv-block", "block-pay"] : ["inv-pay"]), "pay-end"];
+    c.d = dur(c.r[0]);
+    counts[c.r[0]]++;
+    active.push(c);
+    if (render) attach(c);
+  }
+
+  function attach(c) {
+    const el = pool.pop() || document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    el.setAttribute("r", "4.3");
+    el.setAttribute("class", "tok");
+    c.el = el;
+    c.painted = false;
+    tokLayer.appendChild(el);
+  }
+
+  function advance(c, render) {
+    while (c.i < c.r.length && time >= c.start + c.d) {
+      const end = c.start + c.d, seg = c.r[c.i];
+      if (seg === "gr-inv") c.inv = end;
+      if (seg === "inv-pay" || seg === "block-pay") { c.paidAt = end; paid++; }
+      c.i++;
+      c.start = end;
+      if (c.i < c.r.length) {
+        const next = c.r[c.i];
+        c.d = dur(next);
+        counts[next]++;
+        if (next === "po-price" || next === "inv-block") c.flag = true;
+        if (next === "block-pay" && flows && render) notifyBlock();
+      }
+    }
+    return c.i >= c.r.length;
+  }
+
+  function step(days, render) {
+    time += days;
+    spawnAcc += days;
+    while (spawnAcc >= SPAWN) { spawnAcc -= SPAWN; spawn(render); }
+    for (let k = active.length - 1; k >= 0; k--) {
+      const c = active[k];
+      if (advance(c, render)) {
+        recent.push({ cycle: c.paidAt - c.t0, late: c.paidAt - c.inv > 30 });
+        if (recent.length > WINDOW) recent.shift();
+        if (c.el) { c.el.remove(); pool.push(c.el); c.el = null; }
+        active.splice(k, 1);
+      }
+    }
+  }
+
+  function draw() {
+    for (const c of active) {
+      if (!c.el) attach(c);
+      const t = Math.min(1, (time - c.start) / c.d);
+      const p = EDGES[c.r[c.i]].at(t);
+      c.el.setAttribute("cx", p[0].toFixed(1));
+      c.el.setAttribute("cy", p[1].toFixed(1));
+      if (c.flag && !c.painted) { c.el.setAttribute("class", "tok flag"); c.painted = true; }
+    }
+  }
+
+  function stats() {
+    let max = 1;
+    for (const k in counts) max = Math.max(max, counts[k]);
+    for (const k in edgeEls) edgeEls[k].style.strokeWidth = (1.3 + 4.4 * Math.sqrt(counts[k] / max)).toFixed(2);
+    for (const k in countEls) countEls[k].textContent = fmtInt.format(counts[k]);
+    for (const k in badgeEls) {
+      let n = 0;
+      for (const c of active) if (c.r[c.i] === k) n++;
+      badgeEls[k].classList.toggle("on", n > 0);
+      badgeEls[k].querySelector("text").textContent = n;
+    }
+    kPaid.textContent = fmtInt.format(paid);
+    if (recent.length) {
+      let sum = 0, onTime = 0;
+      for (const r of recent) { sum += r.cycle; if (!r.late) onTime++; }
+      const avg = sum / recent.length, share = onTime / recent.length;
+      kCycle.textContent = fmtDec.format(avg);
+      kOnTime.textContent = fmtPct.format(share);
+      kpiCycle.classList.toggle("good", avg <= 33);
+      kpiCycle.classList.toggle("bad", avg >= 36);
+      kpiOnTime.classList.toggle("good", share >= 0.88);
+      kpiOnTime.classList.toggle("bad", share < 0.8);
+    }
+  }
+
+  function notifyBlock() {
+    const now = performance.now();
+    if (now - lastAlert < 2600) return;
+    lastAlert = now;
+    const doc = "51056" + String(Math.floor(Math.random() * 1e5)).padStart(5, "0");
+    simToast.innerHTML = `${icon("message")}<span>${esc(UI[lang].simToast(doc))}</span>`;
+    simToast.classList.add("show");
+    clearTimeout(notifyBlock.t);
+    notifyBlock.t = setTimeout(() => simToast.classList.remove("show"), 2100);
+    const ping = $("#ping", svg);
+    ping.classList.remove("go");
+    void ping.getBoundingClientRect();
+    ping.classList.add("go");
+  }
+
+  // Fast-forward so the map opens with history, then animate in real time.
+  function warm(days) {
+    const steps = Math.round(days / 0.25);
+    for (let i = 0; i < steps; i++) step(0.25, false);
+  }
+  warm(150);
+
+  let raf = 0, last = 0, lastStats = 0, ready = reduce, inView = false;
+  function loop(now) {
+    const dt = Math.min(0.06, (now - last) / 1000);
+    last = now;
+    step(dt / SPD, true);
+    draw();
+    if (now - lastStats > 300) { stats(); lastStats = now; }
+    raf = requestAnimationFrame(loop);
+  }
+  function sync() {
+    const run = ready && inView && !document.hidden && !reduce;
+    if (run && !raf) { last = performance.now(); raf = requestAnimationFrame(loop); }
+    if (!run && raf) { cancelAnimationFrame(raf); raf = 0; }
+    $("#sim").classList.toggle("paused", !run);
+  }
+  new IntersectionObserver((es) => { inView = es[es.length - 1].isIntersecting; sync(); }, { threshold: 0.12 }).observe($("#sim"));
+  document.addEventListener("visibilitychange", sync);
+  setTimeout(() => { ready = true; tokLayer.style.opacity = ""; draw(); sync(); }, reduce ? 0 : 1350);
+
+  return {
+    setLang(l) {
+      const T = UI[l];
+      fmtInt = new Intl.NumberFormat(T.locale);
+      fmtDec = new Intl.NumberFormat(T.locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+      fmtPct = new Intl.NumberFormat(T.locale, { style: "percent", maximumFractionDigits: 0 });
+      $$("[data-n]", svg).forEach((el) => { el.textContent = T.nodes[el.dataset.n]; });
+      stats();
+      if (reduce) draw();
+    },
+    setFlows(on) {
+      flows = on;
+      if (reduce) { warm(150); draw(); stats(); }
+    }
+  };
+})();
+
+/* ===================== Language ===================== */
+function get(obj, path) { return path.split(".").reduce((o, k) => (o == null ? o : o[k]), obj); }
+let pqlOpen = false;
+
+function applyLang(l, animate) {
+  lang = l;
+  const T = UI[l];
+  document.documentElement.lang = l;
+  $$("[data-i18n]").forEach((el) => { const v = get(T, el.dataset.i18n); if (typeof v === "string") el.textContent = v; });
+  $$("[data-i18n-aria]").forEach((el) => { const v = get(T, el.dataset.i18nAria); if (typeof v === "string") el.setAttribute("aria-label", v); });
+  $("#role").textContent = CV.role[l];
+  $("#summary").textContent = CV.summary[l];
+  $("#photo").alt = T.photoAlt;
+  $("#pql-btn").textContent = pqlOpen ? T.hidePql : T.showPql;
+  $("#jobs").innerHTML = renderJobs(l);
+  $("#projects").innerHTML = renderProjects(l);
+  $("#skills-grid").innerHTML = renderSkills(l);
+  $("#edu-grid").innerHTML = renderEdu(l);
+  $$(".lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.set === l)));
+  Sim.setLang(l);
+  watchPreviews();
+  updateRail();
+  moveIndicator();
+  if (animate && !reduce) {
+    const m = $("#main");
+    m.classList.remove("swap");
+    void m.offsetWidth;
+    m.classList.add("swap");
+  }
+}
+
+function langFromHash() {
+  const h = (location.hash || "").slice(1);
+  return h === "en" || h === "es" ? h : null;
+}
+function initialLang() {
+  const h = langFromHash();
+  if (h) return h;
+  try { return (navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en"; } catch (e) { return "es"; }
+}
+
+/* ===================== Scroll effects ===================== */
+let previewObserver = null;
+function watchPreviews() {
+  const items = $$("[data-preview]");
+  if (!("IntersectionObserver" in window)) { items.forEach((p) => p.classList.add("in-view")); return; }
+  if (previewObserver) previewObserver.disconnect();
+  previewObserver = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in-view"); previewObserver.unobserve(e.target); } });
+  }, { threshold: 0.35 });
+  items.forEach((p) => previewObserver.observe(p));
+}
+
+function updateRail() {
+  const tl = $("#timeline");
+  if (!tl) return;
+  const r = tl.getBoundingClientRect();
+  const anchor = window.innerHeight * 0.62;
+  const p = Math.max(0, Math.min(1, (anchor - r.top) / r.height));
+  $("#rail-fill").style.transform = `scaleY(${p.toFixed(4)})`;
+  $$(".job", tl).forEach((j) => {
+    const d = j.querySelector(".rail-dot").getBoundingClientRect();
+    j.classList.toggle("lit", d.top + 8 < anchor);
+  });
+}
+let ticking = false;
+window.addEventListener("scroll", () => {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => { updateRail(); ticking = false; });
+}, { passive: true });
+window.addEventListener("resize", () => { updateRail(); moveIndicator(); });
+
+const SECTIONS = ["exp", "proj", "skills", "edu", "contact"];
+let activeSec = null;
+function moveIndicator() {
+  const ind = $("#nav-ind");
+  const b = activeSec && $(`.bar-nav button[data-go="${activeSec}"]`);
+  if (!b || !b.offsetWidth) { ind.style.opacity = "0"; return; }
+  ind.style.opacity = "1";
+  ind.style.width = `${b.offsetWidth - 24}px`;
+  ind.style.transform = `translateX(${b.offsetLeft + 12}px)`;
+}
+function setActive(id) {
+  activeSec = id;
+  $$(".bar-nav button").forEach((b) => b.setAttribute("aria-current", String(b.dataset.go === id)));
+  moveIndicator();
+}
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); });
+}, { rootMargin: "-42% 0px -52% 0px" });
+SECTIONS.forEach((id) => spy.observe(document.getElementById(id)));
+new IntersectionObserver((es) => {
+  const e = es[es.length - 1];
+  $("#bar").classList.toggle("scrolled", !e.isIntersecting);
+  if (e.isIntersecting && e.boundingClientRect.top > 0) setActive(null);
+}).observe($("#name"));
+
+document.addEventListener("click", (e) => {
+  const go = e.target.closest("[data-go]");
+  if (!go) return;
+  const id = go.dataset.go;
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (id === "top") window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  else el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+});
+
+/* ===================== Copy ===================== */
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-copy]");
+  if (!b) return;
+  try {
+    await navigator.clipboard.writeText(b.dataset.copy);
+    b.classList.add("done");
+    b.innerHTML = icon("check");
+    toast(UI[lang].copied);
+    setTimeout(() => { b.classList.remove("done"); b.innerHTML = icon("copy"); }, 1600);
+  } catch (err) {
+    toast(UI[lang].copyFail);
+  }
+});
+
+/* ===================== PDF download ===================== */
+function savePdf() {
+  const file = `CV_Victor_Corchado_${lang.toUpperCase()}.pdf`;
+  const a = document.createElement("a");
+  a.href = file;
+  a.download = file;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  toast(UI[lang].pdfSaved);
+}
+document.addEventListener("click", (e) => { if (e.target.closest("[data-pdf]")) savePdf(); });
+
+/* ===================== Simulation controls ===================== */
+const flowsInput = $("#flows");
+flowsInput.addEventListener("change", () => {
+  $("#flows-label").classList.remove("hint");
+  Sim.setFlows(flowsInput.checked);
+});
+$("#pql-btn").addEventListener("click", () => {
+  pqlOpen = !pqlOpen;
+  $("#pql").hidden = !pqlOpen;
+  const b = $("#pql-btn");
+  b.setAttribute("aria-expanded", String(pqlOpen));
+  b.textContent = pqlOpen ? UI[lang].hidePql : UI[lang].showPql;
+});
+
+/* ===================== Init ===================== */
+paintIcons();
+$$(".lang button").forEach((b) => b.addEventListener("click", () => {
+  const l = b.dataset.set;
+  if (l === lang) return;
+  applyLang(l, true);
+  if (langFromHash() !== l) location.hash = l;
+}));
+window.addEventListener("hashchange", () => { const h = langFromHash(); if (h && h !== lang) applyLang(h, true); });
+applyLang(initialLang(), false);
+})();
+</script>
+</body>
+</html>
